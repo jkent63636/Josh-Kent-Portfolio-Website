@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+    
+{% block title %}
+    Embeded JavaScript Projects
+{% endblock %}
+
+{% block main %}
+    <p>Embeded JavaScript Projects</p>
+
+    <canvas id="testCanvas" width="500" height="500" style="border: 3px solid black"></canvas>
+    <script>   
+        var canvas = document.getElementById("testCanvas");
+        var ctx = canvas.getContext("2d")
+
+        ctx.beginPath();
+
+        ctx.fillStyle = "black";
+        ctx.rect(30, 30, 100, 50)
+        ctx.fill();
+
+        ctx.closePath();
+
+    </script>
+
+{% endblock %}

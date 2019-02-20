@@ -5,35 +5,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link href="/static/styles.css" rel="stylesheet"/>
+        <link href="/static/style.css" rel="stylesheet"/>
         
         <title>Josh Kent's Portfolio: {% block title %}{% endblock %}</title>
 
         {% block head %}{% endblock %}
+        <style>
+            li {
+                position: sticky;
+            }
+        </style>
 
     </head>
 
     <body>
-        <header>Josh Kent's Portfolio</header>
-        <p>He's done some stuff</p>
+        <header>
+            <h1><a id="myNameTop" href="/">Joshua Kent</a></h1>
+        </header>
+        <!-- <nav> -->
+            <ul>  
+                <li class="nav-item"><a class="nav-link" href="/resume">Resumé</a></li>
+                <li class="dropdown nav-item"><a class="dropbtn" href="/code">Code</a>  <!--two classes-->
+                    <div class="dropdown-content">
+                        <a href="/gitHub">GitHub</a> 
+                        <a href="/javaScriptProjects">Embeded JavaScript Projects</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/graphicDesign">Graphic Design</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            </ul>
+        <!-- </nav> -->
+        
 
-        <nav class="navbar navbar-expand-md navbar-light bg-light border">
-            <a class="navbar-brand" href="/">Joshua Kent</a>
-            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav mr-auto mt-2">
-                    <li class="nav-item"><a class="nav-link" href="/resume">resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/graphicDesignPortfolio">graphicDesignPortfolio</a></li>
-                </ul>
-            </div>
-        </nav>
 
-        <main class="container p-5">
+        <main>
             {% block main %}{% endblock %}
         </main>
-
     </body>
 
 </html>

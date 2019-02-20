@@ -1,50 +1,93 @@
-nav .navbar-brand
-{
-    /* size for brand */
-    font-size: xx-large;
+body {
+    margin: 0%;
+    height: 100%;
+    width: 100%;
 }
 
-/* colors for brand */
-nav .navbar-brand .blue
-{
-    color: #537fbe;
+main {
+    margin: 2%
 }
 
-nav .navbar-brand .red
-{
-    color: #ea433b;
+header {
+    position: relative;
 }
 
-nav .navbar-brand .yellow
-{
-    color: #f5b82e;
+h1 {
+    font-size: 3em;
+    margin-top: 1.75%;
+    margin-bottom: 1.75%;
+    margin-left: 2.5%;
 }
 
-nav .navbar-brand .green
-{
-    color: #2e944b;
+#myNameTop {
+    color: red;
+    text-decoration: none;
 }
 
-main .form-control
-{
-    /* center form controls */
-    display: inline-block;
-
-    /* override Bootstrap's 100% width for form controls */
-    width: auto;
+p {
+    font-size: 1em;
 }
 
-main
-{
-    /* scroll horizontally as needed */
-    overflow-x: auto;
-
-    /* center contents */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    width: 100%;
+    top: 0px;
+}
+  
+li  {
+    display:inline-block;
+}
+  
+li a, .dropbtn{
+    display: block;
+    color: white;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(228, 40, 40);
 }
 
-main img
-{
-    /* constrain images on small screens */
-    max-width: 100%;
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+      background-color: #f1f1f1
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.nav-item {
+    font-size: 2em;
 }
